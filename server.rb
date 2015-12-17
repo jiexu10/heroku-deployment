@@ -10,7 +10,7 @@ configure :production do
   set :db_config, {
     host: uri.host,
     port: uri.port,
-    dbname: uri.parth.delete('/'),
+    dbname: uri.path.delete('/'),
     user: uri.user,
     password: uri.password
   }
